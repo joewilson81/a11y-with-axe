@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Testing stuff with aXe.</title>
+  <meta name="description" content="Non-conformant by design. How else will we see the errors?">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/milligram.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Buttons, links, and things</h2>
+
+  <a class="button button-cta" onClick="cs.fakeButton()">Fake Button</a>
+
+  <p><a href="http://google.com">Valid link</a></p>
+  <p><a href="">Empty href</a></p>
+  <p><a href="#">Pound sign for href</a></p>
+  <p><a href="javascript:void(0)">Javascript in href</a></p>
+
+  <h5>Slider things</h5>
+
+  <form>
+    <label for="widget-proficiency">What is your proficiency with widgets?</label>
+    <input type="range" id="widget-proficiency" min="0" value="50" max="100" step="1" role="slider" aria-valuemin="0" aria-valuemax="100">
+  </form>
+
+  <h2>Thing where the content changes</h2>
+
+  <div class="row">
+    <div class="column">
+      <button type="button" name="cycle-content" onClick="cs.cycleContent()" aria-controls="cycle-content-target">Cycle the content</button>
+    </div>
+    <div class="column column-75">
+      <p id="cycle-content-target" aria-live="polite" aria-relevant="additions removals">Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <h4>Things Samuel L. Jackson says in movies</h4>
+
+  <h3>Pulp Fiction</h3>
+
+  <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+
+  <h3>More Pulp</h3>
+
+  <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+
+  <hr />
+
+  <h5>aXe says</h5>
+  <div id="axe-report"></div>
+</div>
+
+<script src="js/axe.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chicken-scratch.js"></script>
+</body>
+</html>
